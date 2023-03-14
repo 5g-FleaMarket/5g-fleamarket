@@ -36,6 +36,8 @@ import { ProductsModule } from './products/products.module';
 import { ProductsEntity } from './global/entities/products.entity';
 import { CategoriesEntity } from './global/entities/categories.entity';
 import { ProductImagesEntity } from './global/entities/productimages.entity';
+import { CategoriesLargeEntity } from './global/entities/categories-Large.entity';
+import { CategoriesMiddleEntity } from './global/entities/categories-Middle.entity';
 
 @Module({
   imports: [
@@ -44,6 +46,8 @@ import { ProductImagesEntity } from './global/entities/productimages.entity';
       UserEntity,
       ProductsEntity,
       ProductImagesEntity,
+      CategoriesLargeEntity,
+      CategoriesMiddleEntity,
     ]),
     ConfigModule.forRoot({
       isGlobal: true,
