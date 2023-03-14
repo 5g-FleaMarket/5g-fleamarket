@@ -15,7 +15,9 @@ export class ProductImagesService {
   //   await fs.promises.rename(path.join(__dirname, './tmp', images.filename), finalImagePath);
   async saveProductImage(productId: number, imagePath: string, imageFilename: string): Promise<void> {
     const tmpImagePath = path.join('.', imagePath);
-    const finalImagePath = path.join('.', 'uploads', imageFilename);
+    const finalImagePath = path.join('.', 'src','public', imageFilename);//경로에서 폴더명 뺌
+    // const finalImagePath = path.join('.', imageFilename);
+
 
     // 이미지 이동
     const fileStream = fs.createReadStream(tmpImagePath);

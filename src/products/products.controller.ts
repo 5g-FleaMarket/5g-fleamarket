@@ -44,6 +44,7 @@ export class ProductsController {
   //상품목록조회
   @Public()
   @Get('view')
+  // @Render('product/products-view.ejs')
   getProducts() {
     return this.productsService.getAllProducts();
   }

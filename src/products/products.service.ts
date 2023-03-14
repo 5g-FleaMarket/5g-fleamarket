@@ -45,12 +45,14 @@ export class ProductsService {
     const products = await this.productRepository.find({
       relations: ['category', 'seller', 'images'],
     });
-    // console.log(products[0].images)
-
-    return products;
-
-  }
   
+    const productsWithSellerNickname = products.map(product => {
+      const sellerNickname = product.seller.nickname;
+      return { ...product, seller: { nickname: sellerNickname } };
+    });
+  
+    return productsWithSellerNickname;
+  }
   
   
 

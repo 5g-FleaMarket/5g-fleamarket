@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>order레이아웃</title>
+    <!--    BootStrap Library-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Jua&family=Noto+Serif+KR:wght@200&display=Gowun+Dodum&display=swap"
+          rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+    <!--    Axios-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--    Js -->
+    <script><%- include('../js/main-header.js') %></script>
+</head>
+
+<body style="background-color: #F2F2F2">
+<!--상단 메뉴바-->
+<%- include('main-header.ejs') %>
+
+<!--상단 내비게이션-->
+<div class="container-fluid" style="width:45%; background: white; margin-top: 40px; margin-bottom: 40px; min-height:1000px; padding: 0">
+    <div class="container" style="background: white; padding: 0">
+        <div id="headerMenu" style="padding: 0">
+            <div class="row" style="padding-top: 30px; background-color: white; display: flex;
+  align-items: center;
+  justify-content: center;
+width: 100%; margin: 0">
+                <div class="col-md-3"
+                     style="height: 50px; text-align: center; line-height: 50px; background-color: #05aff2; border-radius: 25px;">
+                    <a onclick="window.location.reload()"
+                       style="color: white; font-weight: bold; font-size: 18px; text-decoration: none;">
+                        관심목록
+                    </a>
+                </div>
+
+                <div class="col-md-3"
+                     style="height: 50px; text-align: center; line-height: 50px; background-color: #05aff2;border-radius: 25px;">
+                    <a onclick="mySellProduct()"
+                       style="color: #ffffff; font-weight: bold; font-size: 18px; text-decoration: none;">
+                        판매진행</a>
+                </div>
+
+                <div class="col-md-3"
+                     style="height: 50px; text-align: center; line-height: 50px; background-color: #05aff2;border-radius: 25px;">
+                    <a onclick="myBuyList()"
+                       style="color: #ffffff; font-weight: bold; font-size: 18px; text-decoration: none;">
+                        구매내역</a>
+                </div>
+
+                <div class="col-md-3"
+                     style="height: 50px; text-align: center; line-height: 50px; background-color: #05aff2; border-radius: 25px;">
+                    <a onclick="mySellList()"
+                       style="color: #ffffff; font-weight: bold; font-size: 18px; text-decoration: none;">
+                        판매내역
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- 본문-->
+    <div class="container" id="bb" style="width: 100%;background: #fff; margin-top: 20px; padding: 0">
+    </div>
+</div>
+<!--하단 메뉴바-->
+<%- include('main-footer.ejs') %>
+
+
+</body>
+
+</html>
